@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Navbar from './Navbar';
+import Info from './info';
 
 const Grid = () => {
 
@@ -255,14 +256,15 @@ const clear = () => {
      setStop(true);
 }
 
-const showSave = () => {
-     document.getElementsByClassName("changeIndex")[0].style.display = "block";
+const showinfo = () => {
+     document.getElementsByClassName('infopage')[0].style.display = "block";
 }
 
 
 return ( 
      <div className='Grid'>
-          <Navbar done = {()=>(setdoneChanging(1))} dfs = {()=>{setChooseAlgo(2); setAlgoset(false)}} bfs = {()=>{setChooseAlgo(1); setAlgoset(false)}} clear = {() => clear()}  arrays = {Gridarr} algo = {chooseAlgo}/>
+          <Info/>
+          <Navbar done = {()=>(setdoneChanging(1))} dfs = {()=>{setChooseAlgo(2); setAlgoset(false)}} bfs = {()=>{setChooseAlgo(1); setAlgoset(false)}} clear = {() => clear()}  arrays = {Gridarr} algo = {chooseAlgo} showinfo = {showinfo}/>
           {algoset && <p className='choose'>* FIRST CHOOSE A TRAVERSAL</p>}
           <div className = "OuterBox">
                {arr.map((array) => (

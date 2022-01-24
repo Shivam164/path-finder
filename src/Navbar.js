@@ -19,6 +19,7 @@ const Navbar = (props) => {
 
                 <button className = "_done" onClick = {props.done}>DONE CREATING BARRIERS</button>
                 <button className = "_reset" onClick = {props.clear}>RESET</button>
+                <button className="info-btn" onClick={props.showinfo}>HELP !</button>
             </div>
         </div>
             
